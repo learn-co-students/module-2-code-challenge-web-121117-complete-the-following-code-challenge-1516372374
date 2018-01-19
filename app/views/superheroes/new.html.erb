@@ -1,0 +1,17 @@
+<h1>Create a New Superhero</h1>
+
+
+<ul>
+  <% if flash[:error] %>
+    <%  flash[:error].each do |error|  %>
+    <li><%= error %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= form_for @superhero do |p| %>
+  Superhero Name: <%= p.text_field :super_name %><br><br>
+  Real Name: <%= p.text_field :name %><br><br>
+  <%= collection_select(:superhero, :superpower_id, @superpowers, :id, :name) %> <br><br>
+  <%= p.submit %>
+<% end %>

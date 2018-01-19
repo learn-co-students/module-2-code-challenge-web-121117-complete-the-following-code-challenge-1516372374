@@ -1,0 +1,8 @@
+<!-- The superhero show page should include the superhero's name (eg. Peter Parker), its super name (eg. Spider-Man), and its superpower. The superpower should link to the superpower show page.
+
+The superpower show page should have its name and description. -->
+
+
+Superhero Name: <%= @superhero.super_name %> <br><br>
+Real Name: <%= @superhero.name %> <br><br>
+Superpower: <%= link_to @superhero.superpower.name, @superhero.superpower %> <br><br>
