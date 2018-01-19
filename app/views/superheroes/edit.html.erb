@@ -1,0 +1,13 @@
+<%= form_for @superhero do |f| %>
+  <%= f.label :name, "Superhero Name: " %>
+  <%= f.text_field :name %>
+
+  <br />
+
+  <%= f.label :superpower_id, "SUPERPOWER" %>
+  <%= f.select :superpower_id, @superpowers %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= button_to "Delete", @drink, method: :delete %>
