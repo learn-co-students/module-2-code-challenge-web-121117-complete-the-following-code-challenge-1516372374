@@ -24,7 +24,7 @@ We have several different superpowers and each can be bestowed upon **more than 
 
 ## Instructions / Deliverables
 
-Read through the instructions to get a sense of the scope of this code challenge, and then tackle them one by one. 
+Read through the instructions to get a sense of the scope of this code challenge, and then tackle them one by one.
 
 ![img](gif2.gif)
 
@@ -38,11 +38,11 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 5. As a visitor to the website, I should be able to create a new superhero with its name and super name.
 
-6. The form should also allow each superhero should be created with **only one of the existing superpowers**.
+6. The form should also allow each superhero should be created with **only one of the existing superpowers**. (belongs_to :superpower)
 
   ![img](add_hero.gif)
 
-7. Make sure no two superheroes have the same super name.
+7. Make sure no two superheroes have the same super name. (validates :name, uniqueness: true)
 
 8. Add a filter to the index view of the superheroes. This will allow the visitor to search for an existing superpower and display all the superheroes with that superpower on the same view page.
 
@@ -53,6 +53,6 @@ Read through the instructions to get a sense of the scope of this code challenge
 ### Hints / Tips
 + Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working.
 + A child model cannot be persisted without being associated with its parent model.
-+ More than one superhero can have the same superpower.
++ More than one superhero can have the same superpower. (has_many :superheroes)
 + We want to be RESTful. What URL should show info about a particular superhero? What URL should show a form to create a superhero? What controller actions are associated?
 + If you're having a hard time implementing the filter, take a look at this http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form. We are asking an input field to search for superpowers.

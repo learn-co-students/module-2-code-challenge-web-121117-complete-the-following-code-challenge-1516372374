@@ -1,0 +1,27 @@
+<% if @superhero.errors %>
+  <h3 style="color:red"><%= @superhero.errors.full_messages[0] %></h3>
+<%  end %>
+
+<div>
+  <%= form_for @superhero do |f| %>
+    <div>
+      <%= f.label :super_name, "Superhero Name: " %>
+      <%= f.text_field :super_name %>
+    </div>
+
+    <div>
+      <%= f.label :name, "Real Name: " %>
+      <%= f.text_field :name %>
+      <br/>
+      <em>(we promise not to tell the supervillains)</em>
+    </div>
+
+    <div>
+      <%= f.collection_select :superpower_id, @superpowers, :id, :name %>
+    </div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
