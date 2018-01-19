@@ -6,7 +6,7 @@ superpowers = [
   {name:"flight",description: "gives the wielder the ability to fly through the skys at supersonic speed"},
   {name:"super human senses",description: "allows the person to user their senses at super human level"},
   {name:"elasticity",description: "can stretch the human body to extreme lengths"},
-]
+]r
 
 superpowers.each {|superpower| Superpower.create(superpower)}
 
