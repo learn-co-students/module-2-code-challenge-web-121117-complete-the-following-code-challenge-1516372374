@@ -5,6 +5,8 @@ class SuperheroesController < ApplicationController
 
   def search
     @superpower = Superpower.find_by(name: search_params)
+    @superheroes = @superpower.superheroes
+    render :index
   end
 
   def show
