@@ -1,8 +1,8 @@
 class SuperheroesController < ApplicationController
   def index
     @superheroes = Superhero.all
-    if params[:term]
-      @superpower = Superpower.find_by(name: params[:term] )
+    if params[:name]
+      @superpower = Superpower.find_by(name: params[:name] )
       redirect_to @superpower
     else
       @superpowers = Superpower.all

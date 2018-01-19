@@ -1,7 +1,7 @@
 <h2>All Superheroes</h2>
 
 <%= form_tag(superheroes_path, :method => "get") do %>
-    <%= text_field_tag :term, params[:term]%>
+    <%= text_field_tag :name, params[:name]%>
     <%= submit_tag "Search" %>
 <% end %>
 
