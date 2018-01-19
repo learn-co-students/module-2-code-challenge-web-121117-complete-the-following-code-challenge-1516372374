@@ -1,0 +1,13 @@
+<h1>Edit <%= @superhero.super_name %></h1>
+
+<%= form_for @superhero do |f| %>
+  <%= f.label "Name: " %>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label "Superhero Name" %>
+  <%= f.text_field :super_name %><br><br>
+
+  <%= f.collection_select :superpower_id, @superpowers, :id, :name %><br><br>
+
+  <%= f.submit %>
+<% end %>

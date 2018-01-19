@@ -11,16 +11,16 @@ superpowers = [
 superpowers.each {|superpower| Superpower.create(superpower)}
 
 superheroes = [
-  {name:"Peter Parker", super_name:"Spider-Man" },
-  {name:"Steve Rogers", super_name:"Captain America" },
-  {name:"Bruce Banner", super_name:"Hulk" },
-  {name:"Natasha Romanoff", super_name:"Black Widow" },
-  {name:"Matthew Murdock", super_name:"Dare Devil" },
-  {name:"Reed Richards", super_name:"Mr.Fantastic" },
-  {name:"T'Challa", super_name:"Black Panther" },
-  {name:"Thor Odinson", super_name:"Thor" },
-  {name:"Tony Stark", super_name:"Iron Man" },
-  {name:"Carol Danvers", super_name:"Captain Marvel" }
+  {name:"Peter Parker", super_name:"Spider-Man", superpower_id: 3 },
+  {name:"Steve Rogers", super_name:"Captain America", superpower_id: 1 },
+  {name:"Bruce Banner", super_name:"Hulk", superpower_id: 1 },
+  {name:"Natasha Romanoff", super_name:"Black Widow", superpower_id: 3 },
+  {name:"Matthew Murdock", super_name:"Dare Devil", superpower_id: 3 },
+  {name:"Reed Richards", super_name:"Mr.Fantastic", superpower_id: 4 },
+  {name:"T'Challa", super_name:"Black Panther", superpower_id: 1 },
+  {name:"Thor Odinson", super_name:"Thor", superpower_id: 1 },
+  {name:"Tony Stark", super_name:"Iron Man", superpower_id: 2 },
+  {name:"Carol Danvers", super_name:"Captain Marvel", superpower_id: 2 }
 ]
 
 # ---------------
