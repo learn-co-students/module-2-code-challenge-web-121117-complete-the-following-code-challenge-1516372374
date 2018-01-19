@@ -1,0 +1,4 @@
+<h2><%= @superhero.super_name %> | <%= @superhero.name %></h2>
+<h4>Superpower: <%= link_to @superhero.superpower.name, superpower_path(@superhero.superpower)%></h4>
+
+<%= button_to "Edit #{@superhero.super_name}", edit_superhero_path(@superhero), method: :get %>
