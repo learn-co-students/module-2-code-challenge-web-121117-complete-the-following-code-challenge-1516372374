@@ -24,17 +24,17 @@ We have several different superpowers and each can be bestowed upon **more than 
 
 ## Instructions / Deliverables
 
-Read through the instructions to get a sense of the scope of this code challenge, and then tackle them one by one. 
+Read through the instructions to get a sense of the scope of this code challenge, and then tackle them one by one.
 
 ![img](gif2.gif)
 
-1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the superheroes and powers have been created with the proper relations.
+1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the superheroes and powers have been created with the proper relations. #done
 
-2. On the superheroes index page, a superhero's name should link to the superhero's show page.
+2. On the superheroes index page, a superhero's name should link to the superhero's show page. #done
 
-3. The superhero show page should include the superhero's name (eg. Peter Parker), its super name (eg. Spider-Man), and its superpower. The superpower should link to the superpower show page.  
+3. The superhero show page should include the superhero's name (eg. Peter Parker), its super name (eg. Spider-Man), and its superpower. The superpower should link to the superpower show page.  #done
 
-4. The superpower show page should have its name and description.
+4. The superpower show page should have its name and description. #done
 
 5. As a visitor to the website, I should be able to create a new superhero with its name and super name.
 
