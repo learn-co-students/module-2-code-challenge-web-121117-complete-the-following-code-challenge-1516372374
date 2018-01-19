@@ -1,9 +1,23 @@
-<h2>All Superheroes</h2>
+<h2>All Superheroes</h2><br />
+
+<%= form_tag superheroes_path, method: "get" do %>
+  <%= label_tag(:superpower_name, "Search By Superpower:") %><br />
+  <%= text_field_tag :superpower_name, '', list: 'superpower_names' %>
+  <datalist id=superpower_names>
+    <% @superpowers.each do |power| %>
+       <option value="<%= power.name %>"></option>
+    <% end %>
+  </datalist>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= link_to "View all superpowers.", superpowers_path%><br />
+<%= link_to "Create a new superhero.", new_superhero_path %><br />
 
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero_path(superhero) %>
     </li>
     <br>
   <% end %>
