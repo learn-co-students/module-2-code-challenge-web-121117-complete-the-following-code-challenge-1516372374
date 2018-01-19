@@ -1,11 +1,12 @@
 class SuperheroesController < ApplicationController
   def index
     @superheroes = Superhero.all
+    @superpowers = Superpower.all
   end
 
   def search
-    @superpower = Superpower.find_by(name: search_params)
-    @superheroes = @superpower.superheroes
+    @superpowers = Superpower.all
+    @superheroes = Superpower.find_by(name: search_params).superheroes
     render :index
   end
 
