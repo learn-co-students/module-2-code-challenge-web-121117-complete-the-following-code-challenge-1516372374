@@ -1,0 +1,33 @@
+Add a filter to the index view of the superheroes. This will allow the visitor to search for an existing superpower and display all the superheroes with that superpower on the same view page.
+
+Hints / Tips
+If you're having a hard time implementing the filter, take a look at this http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form. We are asking an input field to search for superpowers.
+
+
+•cant get filter on index page working yet...
+•need helper method in class?
+•can the controller get params back after view is rendered and then use them in said view?
+
+old broken index view for superheroes:
+
+<h2>All Superheroes</h2>
+
+<%= form_tag superheroes_path, :method => :get do %>
+  <%= label_tag(:q, "Search for heroes with which power?") %>
+  <%= collection_select @superheroes, :superpower_id, @superpowers, :id, :name %>
+  <%= submit_tag 'Filter' %>
+<% end %>
+
+<%= params.inspect %>
+
+
+<ul>
+  <% @superheroes.each do |superhero| %>
+    <% if params[:superpower_id] == superhero.superpower_id %>
+      <li>
+        <%= link_to superhero.super_name, superhero %>
+      </li>
+      <br>
+    <% end %>
+  <% end %>
+</ul>
