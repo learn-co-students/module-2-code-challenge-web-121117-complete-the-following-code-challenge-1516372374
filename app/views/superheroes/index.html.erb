@@ -1,6 +1,6 @@
 <h2>All Superheroes</h2><br />
 
-<%= form_tag superheroes_search_path, method: "get" do %>
+<%= form_tag superheroes_path, method: "get" do %>
   <%= label_tag(:superpower_name, "Search By Superpower:") %><br />
   <%= text_field_tag :superpower_name, '', list: 'superpower_names' %>
   <datalist id=superpower_names>

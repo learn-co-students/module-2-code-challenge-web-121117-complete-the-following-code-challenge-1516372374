@@ -1,13 +1,12 @@
 class SuperheroesController < ApplicationController
-  def index
-    @superheroes = Superhero.all
-    @superpowers = Superpower.all
-  end
 
-  def search
+  def index
     @superpowers = Superpower.all
-    @superheroes = Superpower.find_by(name: search_params).superheroes
-    render :index
+    if params[:superpower_name] != nil
+      @superheroes = Superpower.find_by(name: search_params).superheroes
+    else
+      @superheroes = Superhero.all
+    end
   end
 
   def show
