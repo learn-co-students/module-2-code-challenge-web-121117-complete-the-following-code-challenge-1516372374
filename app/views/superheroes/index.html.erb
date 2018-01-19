@@ -11,7 +11,8 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<%= link_to "or view all superpowers.", superpowers_path%>
+<%= link_to "View all superpowers.", superpowers_path%><br />
+<%= link_to "Create a new superhero.", new_superhero_path %><br />
 
 <ul>
   <% @superheroes.each do |superhero| %>
