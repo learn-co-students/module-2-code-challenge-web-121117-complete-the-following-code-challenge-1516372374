@@ -1,0 +1,13 @@
+<h1>New Superhero Form</h1>
+
+<%= render "errors/error_messages" %>
+
+<%= form_for @superhero do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :super_name, "Super Name" %>
+  <%= f.text_field :super_name %>
+  <%= f.label "Superpower" %>
+  <%= f.collection_select :superpower_id, @superpowers, :id, :name %>
+  <%= f.submit %>
+<% end %>
