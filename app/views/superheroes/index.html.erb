@@ -3,8 +3,20 @@
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero_path(superhero) %>
     </li>
     <br>
   <% end %>
 </ul>
+
+
+
+<h2>Search by Superpower</h2>
+<p>allows the visitor to search for an existing superpower and display all the superheroes with that superpower on the same view page</p>
+
+
+<%= form_tag("/superheroes", method: "get") do %>
+  <%= label_tag(:superpower_id, "Show by superpower: ") %>
+  <%= text_field_tag(:superpower_id) %>
+  <%= submit_tag("Search") %>
+<% end %>
