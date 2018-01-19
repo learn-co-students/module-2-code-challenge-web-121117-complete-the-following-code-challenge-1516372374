@@ -1,0 +1,8 @@
+<h1>Editing <%= @superhero.name %>!</h1>
+<%=form_for @superhero do |f|%>
+<%=f.label :name%>
+<%=f.text_field :name%>
+<br />
+<%=f.submit%>
+<%end%>
+<%=button_to "Delete Supehero", @superhero, method: :delete%>
