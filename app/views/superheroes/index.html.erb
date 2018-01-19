@@ -3,8 +3,16 @@
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<h3>Options:</h3>
+<p><%= link_to "Crete New Superhero", new_superhero_path %></p>
+
+
+<!-- On the superheroes index page,
+
+* superhero's name should link to the superhero's show page. -->

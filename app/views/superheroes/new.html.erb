@@ -1,0 +1,43 @@
+<% if flash[:error] %>
+  <% flash[:error].each do |err| %>
+    <h4><%= err %></h4>
+  <%end%>
+<%end%>
+
+
+<h1>Create Superhero</h1>
+
+<%= form_for @superhero do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, placeholder: "Superhero Name" %>
+<%= f.label :super_name %>
+<%= f.text_field :super_name, placeholder: "Super Name" %>
+<%= f.collection_select(:superpower_id, @superpowers, :id, :name) %>
+<%= f.submit %>
+<%= link_to "Cancel", superheroes_path %>
+<% end %>
+
+<!-- CAN'T create a new Superhero
+
+- byebug gives me all the params (below), but keep getting an error:
+ActionController::ParameterMissing in SuperheroesController#create
+
+ -->
+
+ <!--  -->
+
+<!-- (byebug) params
+<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"MfT8oAXbMy+cdpLJXDPbLaYDXAoYuccfoPfi+csYtYC/uWeTnXFjjgkbd2ITBVhaSFgDGac97K2cmVPPzQWwkQ==",
+
+"superhero"=> {
+  "name" => "new Superhero",
+  "super_name" => "New Name",
+  "superpower_id" => "2"},
+
+  "commit"=>"Create Superhero", "controller"=>"superheroes", "action"=>"create"} permitted: false> -->
+
+
+  <!--  -->
+
+  <!-- (byebug) params
+<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"cu8aLBuB9pAZcqsFLYmMrKwGEd7HtScvOOik7LBl4DGg7N9EExQtqB0YXhPHfIpvNa2e8GLPI9DTLiGorDcNEw==", "superhero"=>{"name"=>"name", "super_name"=>"super name", "superpower_id"=>"4"}, "commit"=>"Create Superhero", "controller"=>"superheroes", "action"=>"create"} permitted: false> -->
