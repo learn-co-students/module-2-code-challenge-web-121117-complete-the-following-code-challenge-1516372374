@@ -1,0 +1,6 @@
+<%=form_for @superpower do |f|%>
+<%=f.label :name%>
+<%=f.text_field :name%>
+<%=f.submit%>
+<%end%>
+<%=button_to "Delete Superpower", @superpower, method: :delete%>

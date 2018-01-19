@@ -1,0 +1,6 @@
+<h1><%=@superpower.name%>’s Superheroes</h1>
+  <ul>
+    <%@superpower.superheroes.each do |s|%>
+    <li><%=link_to s.name, s%></li>
+      <%end%>
+  </ul>
